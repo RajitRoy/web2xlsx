@@ -5,7 +5,7 @@
  * @licence MIT
  * Requires jQuery, FileSaver, ExcelJS (in that order: before this script)
  */
-//test
+
 /**
  * @license
  * Copyright (c) 2020 Rajit Roy
