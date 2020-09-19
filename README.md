@@ -18,22 +18,22 @@ web2xlsx
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Importing](#importing)
-    3. [Requirements](#requirements)
-    3. [Location](#location)
+    1. [Requirements](#requirements)
+    2. [Location](#location)
     3. [An example import](#an-example-import)
 4. [Basic Usage](#basic-usage)
-    4. [A simple download for one table](#a-simple-download-for-one-table)
-    4. [Multiple Tables](#multiple-tables)
+    1. [A simple download for one table](#a-simple-download-for-one-table)
+    2. [Multiple Tables](#multiple-tables)
 5. [Configurations for initialization](#configurations-for-initialization)
-    5. [Example](#example)
+    1. [Example](#example)
 6. [Configurations for each table/sheet](#configurations-for-each-tablesheet)
-    6. [Customize Worksheet Tabs](#customize-worksheet-tabs)
-    6. [Exclude certain Rows or Columns](#exclude-certain-rows-or-columns)
-    6. [Default Column Widths](#default-column-widths)
-    6. [Custom Column Widths](#custom-column-widths)
-    6. [Wrap Text](#wrap-text)
+    1. [Customize Worksheet Tabs](#customize-worksheet-tabs)
+    2. [Exclude certain Rows or Columns](#exclude-certain-rows-or-columns)
+    3. [Default Column Widths](#default-column-widths)
+    4. [Custom Column Widths](#custom-column-widths)
+    5. [Wrap Text](#wrap-text)
     6. [Run functions before and after operations for each table](#run-functions-before-and-after-operations-for-each-table)
-    6. [Console Log for debugging](#console-log-for-debugging)
+    7. [Console Log for debugging](#console-log-for-debugging)
 7. [Future Scope](#future-scope)
 8. [Versions](#versions)
 
@@ -69,7 +69,7 @@ I hope this script helps someone sometime. Any contributions or criticisms are w
 #### Requirements
 Before importing this script, one should import the following if they are unavailable in the project. 
 
-_NOTE_: The order in which they are imported is important
+> _NOTE_: The order in which they are imported is important
 
 1. [jQuery](https://github.com/jquery/jquery)
 2. [FileSaver](https://github.com/eligrey/FileSaver.js/)
@@ -85,9 +85,9 @@ _NOTE_: The order in which they are imported is important
 
 #### An example import
 
-_NOTE_: Be aware of the different versions of each script being imported. Unless necessary, simply import the latest version of each.
+> _NOTE_: Be aware of the different versions of each script being imported. Unless necessary, simply import the latest version of each.
 
-_NOTE_: The order in which they are imported is important
+> _NOTE_: The order in which they are imported is important
 
 
 ```html
@@ -108,7 +108,7 @@ If one simply wants to export the table as it is:
 
 #### A simple download for one table
 
-_NOTE_: The HTML table should be properly decorated in ```<table>``` tag, and values should reside in corresponding ```<thead>```, ```<tbody>```, or ```<tfoot>``` tags. In case of any error or any other structure, simply make the changes in the source code itself after using the ```consoleLogIteration``` option if convinient.
+> _NOTE_: The HTML table should be properly decorated in ```<table>``` tag, and values should reside in corresponding ```<thead>```, ```<tbody>```, or ```<tfoot>``` tags. In case of any error or any other structure, simply make the changes in the source code itself after using the ```consoleLogIteration``` option if convinient.
 
 Say you have a table with id ```#table1``` (or class ```.tableClass```), simply pass it to the function after initializing it. Also include the Excel filename (optional. If not included, it simply gives the current date as the filename)
 
@@ -123,7 +123,7 @@ let tableExport = web2xlsx({
 
 The above can be run on a button click or something similar. The first parameter: the JSON contains initialization options while the second parameter: the JSON array includes individual tables and their options.
 
-_NOTE_: Do remember that the second parameter is a JSON 'array'.
+> _NOTE_: Do remember that the second parameter is a JSON 'array'.
 
 #### Multiple Tables
 
@@ -179,9 +179,9 @@ Here, we are simply running ```func1()``` and ```func2()``` at the start and end
 
 The following customizations are available as discussed above in the features. These values can be optionally passed as the second parameter for each table in their corresponding JSON objects inside the total JSON array.
 
-_NOTE_: Colors should be in ```hex``` format throughout.
+> _NOTE_: Colors should be in ```hex``` format throughout.
 
-_NOTE_: Counting starts at ```0```.
+> _NOTE_: Counting starts at ```0```.
 
 
 #### Customize Worksheet Tabs
