@@ -44,7 +44,7 @@ A lot of other similar libraries exist, but they either convert to .xls, or they
 
 I hope this script helps someone sometime. Any contributions or criticisms are welcome.
 
-## Features
+## Features [⬆](#table-of-contents "Scroll Up: TOC")
 
 1. **Multiple Sheets** for multiple tables in same file
     1. With _Sheet names_
@@ -64,9 +64,9 @@ I hope this script helps someone sometime. Any contributions or criticisms are w
 8. _Console Log_ data for individual cells (value/colors/etc.) for **optional debugging**
 9. Proper commenting if one chooses to understand or modify the code itself (uses JSDoc)
 
-## Importing
+## Importing [⬆](#table-of-contents "Scroll Up: TOC")
 
-#### Requirements
+#### Requirements [⬆](#table-of-contents "Scroll Up: TOC")
 Before importing this script, one should import the following if they are unavailable in the project. 
 
 > _NOTE_: The order in which they are imported is important
@@ -77,13 +77,13 @@ Before importing this script, one should import the following if they are unavai
 4. [ExcelJS](https://github.com/exceljs/exceljs)
 5. [**web2xlsx**](https://github.com/rajitroy/web2xlsx)
 
-#### Location
+#### Location [⬆](#table-of-contents "Scroll Up: TOC")
 |Type|Place|Comments|
 |---|---|---|
 |Github|./dist folder|Choose either the main js or the minified js file. Choose .min.js to save space if needed.|
 |CDN|https://cdn.jsdelivr.net/gh/RajitRoy/web2xlsx@1.0/dist/web2xlsx.min.js|The version '@x.y' can be changed as needed. Be aware of jsDelivr's caches.|
 
-#### An example import
+#### An example import [⬆](#table-of-contents "Scroll Up: TOC")
 
 > _NOTE_: Be aware of the different versions of each script being imported. Unless necessary, simply import the latest version of each.
 
@@ -102,11 +102,11 @@ Before importing this script, one should import the following if they are unavai
 </head>
 ```
 
-## Basic Usage
+## Basic Usage [⬆](#table-of-contents "Scroll Up: TOC")
 
 If one simply wants to export the table as it is:
 
-#### A simple download for one table
+#### A simple download for one table [⬆](#table-of-contents "Scroll Up: TOC")
 
 > _NOTE_: The HTML table should be properly decorated in ```<table>``` tag, and values should reside in corresponding ```<thead>```, ```<tbody>```, or ```<tfoot>``` tags. In case of any error or any other structure, simply make the changes in the source code itself after using the ```consoleLogIteration``` option if convinient.
 
@@ -125,7 +125,7 @@ The above can be run on a button click or something similar. The first parameter
 
 > _NOTE_: Do remember that the second parameter is a JSON 'array'.
 
-#### Multiple Tables
+#### Multiple Tables [⬆](#table-of-contents "Scroll Up: TOC")
 
 Say you have another table... Simply add it to the tables array one by one.
 
@@ -138,7 +138,7 @@ let tableExport = web2xlsx({
 );
 ```
 
-## Configurations for initialization
+## Configurations for initialization [⬆](#table-of-contents "Scroll Up: TOC")
 
 These options are passed as a JSON object as the first parameter. 
 
@@ -148,7 +148,7 @@ Example: let ```foo = function (bar) {}``` Pass the variable ```foo()``` as the 
 * ```"initFuncAtEnd"```: Function to run at end of it all. 
                        Example: let ```foo = function (bar) {}``` Pass the variable ```foo()``` as the value.
                        
-#### Example
+#### Example [⬆](#table-of-contents "Scroll Up: TOC")
 
 ```javascript
 let tableExport = web2xlsx({
@@ -175,7 +175,7 @@ let func2 = function () {
 
 Here, we are simply running ```func1()``` and ```func2()``` at the start and end of the operation to measure the time taken to complete the task.
 
-## Configurations for each table/sheet
+## Configurations for each table/sheet [⬆](#table-of-contents "Scroll Up: TOC")
 
 The following customizations are available as discussed above in the features. These values can be optionally passed as the second parameter for each table in their corresponding JSON objects inside the total JSON array.
 
@@ -184,7 +184,7 @@ The following customizations are available as discussed above in the features. T
 > _NOTE_: Counting starts at ```0```.
 
 
-#### Customize Worksheet Tabs
+#### Customize Worksheet Tabs [⬆](#table-of-contents "Scroll Up: TOC")
 
 By default, each individual table is presented in a different excel sheet. Here are the options if one chooses to change the default Sheet name (Sheet1, Sheet2, ...) or the default Sheet Tab Color (white).
 
@@ -200,7 +200,7 @@ By default, each individual table is presented in a different excel sheet. Here 
 }]
 ```
 
-#### Exclude certain Rows or Columns
+#### Exclude certain Rows or Columns [⬆](#table-of-contents "Scroll Up: TOC")
 
 If one chooses to not include some rows or columns (_from body_).
 
@@ -216,7 +216,7 @@ If one chooses to not include some rows or columns (_from body_).
 
 Here we are excluding columns: 1st and 2nd (counting starts at 0) and rows: 2nd and 4th (from body).
 
-#### Default Column Widths
+#### Default Column Widths [⬆](#table-of-contents "Scroll Up: TOC")
 
 The default excel column width is approximately ```9```. But if one wants to change that:
 
@@ -229,7 +229,7 @@ The default excel column width is approximately ```9```. But if one wants to cha
 }]
 ```
 
-#### Custom Column Widths
+#### Custom Column Widths [⬆](#table-of-contents "Scroll Up: TOC")
 
 Even after setting the default column width, if one chooses to change the width of only certain columns:
 
@@ -244,7 +244,7 @@ Even after setting the default column width, if one chooses to change the width 
 
 Here we are changing the widths of columns: 1st (to 60) and 5th (to just 5).
 
-#### Wrap Text
+#### Wrap Text [⬆](#table-of-contents "Scroll Up: TOC")
 
 If one chooses to wrap the text inside Excel.
 
@@ -259,7 +259,7 @@ If one chooses to wrap the text inside Excel.
 
 Default is ```false```.
 
-#### Run functions before and after operations for each table
+#### Run functions before and after operations for each table [⬆](#table-of-contents "Scroll Up: TOC")
 
 This option is just like the above mentioned ```initFuncAtStart``` and ```initFuncAtEnd``` as discussed above (passed as first parameters). But these run for each table individually.
 
@@ -273,7 +273,7 @@ This option is just like the above mentioned ```initFuncAtStart``` and ```initFu
 }]
 ```
 
-#### Console Log for debugging
+#### Console Log for debugging [⬆](#table-of-contents "Scroll Up: TOC")
 
 If one wishes to see the data as passed to excel for each cell (their values/font styles etc.), one can simply switch this ON and check the developer's console in their browsers after the download operation.
 
@@ -286,7 +286,7 @@ If one wishes to see the data as passed to excel for each cell (their values/fon
 }]
 ```
 
-##### An example output showing all the values:
+##### An example output showing all the values: [⬆](#table-of-contents "Scroll Up: TOC")
 
 For an extremely simple table: 
 
@@ -343,11 +343,11 @@ The console output will be:
 
 This might help if the downloaded .xlsx file does not match the HTML table and something seems to go wrong.
 
-## Future Scope
+## Future Scope [⬆](#table-of-contents "Scroll Up: TOC")
 * [ ] Strikethrough support
 * [ ] JSON support (Ability to directly feed a JSON array and convert to .xlsx)
 
-## Versions
+## Versions [⬆](#table-of-contents "Scroll Up: TOC")
 |Version|Date|Description|
 |:---:|:---:|:---|
 |1.0|20th Sept. 2020|Initial Version with simple options to convert any HTML table to .xlsx file|
