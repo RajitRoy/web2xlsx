@@ -37,14 +37,14 @@
  * Gets the background color of element. If transparent: gets the background color of it's parent recursively
  */
 function realBackgroundColor(elem) {
-	
+
 	/**
 	 * @type {string}
 	 * the default value returned by a browser if no background-color property found
 	 */
 	var transparent = 'rgba(0, 0, 0, 0)';
 	var transparentIE11 = 'transparent';
-	if (!elem) return transparent;
+	if (!elem) return 'rgb(255, 255, 255)';
 	
 	var bg = getComputedStyle(elem).backgroundColor;
 	
@@ -52,6 +52,7 @@ function realBackgroundColor(elem) {
 	 * if none, find background color of it's parent recursively
 	 */
 	if (bg === transparent || bg === transparentIE11) {
+		if (elem.nodeName === "HTML") return 'rgb(255, 255, 255)';
 		return realBackgroundColor(elem.parentElement);
 	} else {
 		return bg;
