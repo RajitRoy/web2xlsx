@@ -37,7 +37,7 @@ web2xlsx
 7. [Future Scope](#future-scope)
 8. [Versions](#versions)
 
-## Introduction
+## Introduction [⬆](#table-of-contents "Scroll Up: TOC")
 Web2xlsx is a javascript library which can be used to convert an HTML table to a .xlsx file which is then downloaded. This entire process happens in the client side. This library uses pre-existing and well maintained libraries: jQuery, FileSaver and ExcelJS. 
 
 A lot of other similar libraries exist, but they either convert to .xls, or they do not support colors/font styles etc., or they are old, or paid. This library when imported into an existing web project gives one the ability to do the necessary conversion in very simple steps. 
