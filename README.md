@@ -15,13 +15,27 @@ web2xlsx
 [comment]: # (Markdown page specially designed for GitHub)
 
 ## Table Of Contents
-1. [Introduction](#versions)
+1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Importing](#importing)
     3. [Requirements](#requirements)
-4. [Options](#options)
-5. [Future Scope](#future-scope)
-6. [Versions](#versions)
+    3. [Location](#location)
+    3. [An example import](#an-example-import)
+4. [Basic Usage](#basic-usage)
+    4. [A simple download for one table](#a-simple-download-for-one-table)
+    4. [Multiple Tables](#multiple-tables)
+5. [Configurations for initialization](#configurations-for-initialization)
+    5. [Example](#example)
+6. [Configurations for each table/sheet](#configurations-for-each-tablesheet)
+    6. [Customize Worksheet Tabs](#customize-worksheet-tabs)
+    6. [Exclude certain Rows or Columns](#exclude-certain-rows-or-columns)
+    6. [Default Column Widths](#default-column-widths)
+    6. [Custom Column Widths](#custom-column-widths)
+    6. [Wrap Text](#wrap-text)
+    6. [Run functions before and after operations for each table](#run-functions-before-and-after-operations-for-each-table)
+    6. [Console Log for debugging](#console-log-for-debugging)
+7. [Future Scope](#future-scope)
+8. [Versions](#versions)
 
 ## Introduction
 Web2xlsx is a javascript library which can be used to convert an HTML table to a .xlsx file which is then downloaded. This entire process happens in the client side. This library uses pre-existing and well maintained libraries: jQuery, FileSaver and ExcelJS. 
